@@ -1,6 +1,6 @@
-drop database if exists modelorama;
-create database modelorama;
-use modelorama;
+drop database if exists deposito;
+create database deposito;
+use deposito;
 
 create table Proveedor(
     Id int not null primary key auto_increment,
