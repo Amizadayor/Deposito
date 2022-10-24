@@ -1,4 +1,9 @@
 <?php
+include 'config/conexionsql.php';
 
-echo "Hola mundo";
+
+echo "<h1>PROVEEDORES REGISTRADOS : </h1>  ";
+$varconex = new conexionsql;
+$varconex->conectar();
+
 ?>
