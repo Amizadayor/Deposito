@@ -77,3 +77,8 @@ create table Producto_Venta(
     Venta_id int not null,
     foreign key (Venta_id) references Venta (Id)
 );
+
+
+INSERT INTO proveedor(Nombre_1, Nombre_2, Apellido_paterno, Apellido_materno, Numero_telefono, Empresa ) 
+VALUES('Albin', 'Ivan', 'Cruz','Castellanos', '9711001281', 'Corona');
+
