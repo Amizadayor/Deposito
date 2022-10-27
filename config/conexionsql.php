@@ -20,10 +20,10 @@
                 echo "<h1>PROVEEDORES REGISTRADOS : </h1> ";
                 foreach($conexion->query('SELECT * FROM proveedor') as $proveedor){
                     echo '<br></br>';
-                    echo 'NOMBRE DEL PROVEEDOR : '. $proveedor[1], $proveedor[2]. '</p>';
-                    echo 'APELLIDO DEL PROVEEDOR : '. $proveedor[3], $proveedor[4]. '</p>';
-                    echo 'NÚMERO DEL PROVEEDOR : '. $proveedor[5]. '</p>';
-                    echo 'EMPRESA DEL PROVEEDOR : '. $proveedor[6]. '</p>';
+                    echo '<strong> NOMBRE DEL PROVEEDOR : </strong>'. $proveedor[1].'&nbsp'. $proveedor[2]. '</p>';
+                    echo '<strong> APELLIDO DEL PROVEEDOR : </strong>'. $proveedor[3].'&nbsp'.$proveedor[4]. '</p>';
+                    echo '<strong> NÚMERO DEL PROVEEDOR : </strong>'. $proveedor[5]. '</p>';
+                    echo '<strong> EMPRESA DEL PROVEEDOR : </strong>'. $proveedor[6]. '</p>';
                 }
 
 //CONEXIÓN A LA TABLA CATEGORIA
@@ -76,6 +76,7 @@
                     echo 'NÚMERO DE TELÉFONO DEL CLIENTE : ' .$cliente[5]. '</p>';
                     echo 'DIRECCIÓN DEL CLIENTE : ' .$cliente[6]. '</p>';
                     echo 'FECHA DE NACIMIENTO DEL CLIENTE : ' .$cliente[7]. '</p>';
+                    echo '<br/>';
                 }
 
             }catch(PDOException $e){
