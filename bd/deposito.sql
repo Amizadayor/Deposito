@@ -51,7 +51,7 @@ create table Cliente(
     Nombre_2 varchar(255),
     Apellido_paterno varchar(255) not null,
     Apellido_materno varchar(255) not null,
-    Numero_telefono int (10) not null,
+    Numero_telefono varchar(10) not null,
     Direccion varchar(255) not null,
     Fecha_nacimiento varchar(10) not null
 
@@ -90,4 +90,5 @@ INSERT INTO Producto(Nombre_producto, Precio_producto, Stock, Categoria_id, Prov
 INSERT INTO Empleado(Usuario, Password_empleado, Nombre_1, Nombre_2, Apellido_paterno, Apellido_materno, Numero_telefono, Direccion, Curp, RFC)
 VALUES ('Manuelux','123456789','Luis', 'Manuel','Reynosa', 'Merida', '9711025196', 'Calle 08 Tamaulipas, Salina Cruz', 'LMRM000911HOCJSNA8', 'LMRM8305281HO');
 
-
+INSERT INTO Cliente(Nombre_1, Nombre_2, Apellido_paterno, Apellido_materno, Numero_telefono, Direccion, Fecha_nacimiento)
+VALUES ('Angel', 'Orrin','Naranjo', 'Cruz', '9719178210', 'Calle 01 Chiapas, Salina Cruz', '11-09-1999');
