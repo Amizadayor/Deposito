@@ -14,3 +14,9 @@ h1{
 strong{
     font-size: 100%;
 }
+
+hr {
+    height: 2px;
+    width: 50%;
+    background-color: rgb(99, 99, 99);
+}
