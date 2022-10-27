@@ -9,5 +9,3 @@ echo '<hr>';
 
 $varconex = new conexionsql;
 $varconex->conectar();
-
-?>
