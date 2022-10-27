@@ -37,6 +37,20 @@
                     echo 'NOMBRE DE LA CATEGORIA : '. $categoria[1]. '</br>';
                     echo 'CAPACIDAD DEL PRODUCTO : '. $categoria[2]. '</br>';
                 }
+
+    //CONEXIÓN A LA TABLA DE PRODUCTOS
+
+                echo "<h1> PRODUCTOS REGISTRADOS : </h1>";
+                $conexion = new PDO('mysql:host=localhost;dbname='.$this->bdname,$this->username, $this->pass);
+                foreach($conexion->query('SELECT * FROM producto') as $producto){
+                    echo '<br></br>';
+                    echo 'NOMBRE DEL PRODUCTO : '. $producto[1]. '</br>';
+                    echo 'PRECIO DEL PRODUCTO : '. $producto[2]. '</br>';
+                    echo 'CANTIDAD DISPONIBLE PARA LA VENTA : '. $producto[3]. '</br>';
+                    echo 'CATEGORIA DEL PRODUCTO : '. $producto[4]. '</br>';
+                    echo 'PROVEEDOR DEL PRODUCTO : '. $producto[5]. '</br>';
+                }
+
             }catch(PDOException $e){
                 echo "Ocurrio un error al conectarte a la base de datos".$e;
 

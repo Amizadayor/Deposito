@@ -82,8 +82,10 @@ create table Producto_Venta(
 INSERT INTO proveedor(Nombre_1, Nombre_2, Apellido_paterno, Apellido_materno, Numero_telefono, Empresa ) VALUES('Albin', 'Ivan', 'Cruz','Castellanos', '9711001281', 'Corona');
 INSERT INTO proveedor(Nombre_1, NOMBRE_2, Apellido_paterno, Apellido_materno, Numero_telefono, Empresa ) VALUES('Juan', 'Amizaday', 'Ojeda','Rosales', '9711004419', 'Tecate');
 
-INSERT INTO categoria(Nombre_categoria, Capacidad_producto) VALUES('Corona Cuartito', '210 ml');
-INSERT INTO categoria(Nombre_categoria, Capacidad_producto) VALUES('Corona Media', '355 ml');
+INSERT INTO categoria(Nombre_categoria, Capacidad_producto) VALUES('Cuartito', '210 ml');
+INSERT INTO categoria(Nombre_categoria, Capacidad_producto) VALUES('Media', '355 ml');
+
+INSERT INTO producto(Nombre_producto, Precio_producto, Stock, Categoria_id, Proveedor_id) VALUES('Corona', '$ 13.5', '100', '1', '2');
 
 
 
