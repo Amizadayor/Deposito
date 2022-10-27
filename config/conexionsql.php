@@ -32,8 +32,8 @@
                 $conexion = new PDO('mysql:host=localhost;dbname='.$this->bdname,$this->username, $this->pass);
                 foreach($conexion->query('SELECT * FROM categoria') as $categoria){
                     echo '<br></br>';
-                    echo 'NOMBRE DE LA CATEGORIA : '. $categoria[1]. '</p>';
-                    echo 'CAPACIDAD DEL PRODUCTO : '. $categoria[2]. '</p>';
+                    echo '<strong> NOMBRE DE LA CATEGORIA : </strong>'. $categoria[1]. '</p>';
+                    echo '<strong> CAPACIDAD DEL PRODUCTO : </strong>'. $categoria[2]. '</p>';
                 }
 
 //CONEXIÓN A LA TABLA DE PRODUCTOS
@@ -42,11 +42,11 @@
                 $conexion = new PDO('mysql:host=localhost;dbname='.$this->bdname,$this->username, $this->pass);
                 foreach($conexion->query('SELECT * FROM Producto') as $producto){
                     echo '<br></br>';
-                    echo 'NOMBRE DEL PRODUCTO : '. $producto[1]. '</p>';
-                    echo 'PRECIO DEL PRODUCTO : '. $producto[2]. '</p>';
-                    echo 'CANTIDAD DISPONIBLE PARA LA VENTA : '. $producto[3]. '</p>';
-                    echo 'CATEGORIA DEL PRODUCTO : '. $producto[4]. '</p>';
-                    echo 'PROVEEDOR DEL PRODUCTO : '. $producto[5]. '</p>';
+                    echo '<strong> NOMBRE DEL PRODUCTO : </strong>'. $producto[1]. '</p>';
+                    echo '<strong> PRECIO DEL PRODUCTO : </strong>'. $producto[2]. '</p>';
+                    echo '<strong> CANTIDAD DISPONIBLE PARA LA VENTA : </strong>'. $producto[3]. '</p>';
+                    echo '<strong> CATEGORIA DEL PRODUCTO : </strong>'. $producto[4]. '</p>';
+                    echo '<strong> PROVEEDOR DEL PRODUCTO : </strong>'. $producto[5]. '</p>';
                 }
 
 //CONEXIÓN A LA TABLA DE EMPLEADOS
@@ -55,14 +55,14 @@
                 $conexion = new PDO('mysql:host=localhost;dbname='.$this->bdname,$this->username, $this->pass);
                 foreach($conexion->query('SELECT * FROM Empleado') as $empleado){
                     echo '<br></br>';
-                    echo 'USUARIO DEL EMPLEADO : ' .$empleado[1]. '</p>';
-                    echo 'CONTRASEÑA DEL EMPLEADO : ' .$empleado[2]. '</p>';
-                    echo 'NOMBRE DEL EMPLEADO : ' .$empleado[3], $empleado[4]. '</p>';
-                    echo 'APELLIDO DEL EMPLEADO : ' .$empleado[5], $empleado[6]. '</p>';
-                    echo 'NÚMERO DE TELÉFONO  DEL EMPLEADO : ' .$empleado[7]. '</p>';
-                    echo 'DIRECCIÓN DEL EMPLEADO : ' .$empleado[8]. '</p>';
-                    echo 'CURP DEL EMPLEADO : ' .$empleado[9]. '</p>';
-                    echo 'RFC DEL EMPLEADO' .$empleado[10]. '</p>';
+                    echo '<strong> USUARIO DEL EMPLEADO : </strong>' .$empleado[1]. '</p>';
+                    echo '<strong> CONTRASEÑA DEL EMPLEADO : </strong>' .$empleado[2]. '</p>';
+                    echo '<strong> NOMBRE DEL EMPLEADO : </strong>' .$empleado[3].'&nbsp'. $empleado[4]. '</p>';
+                    echo '<strong> APELLIDO DEL EMPLEADO : </strong>' .$empleado[5].'&nbsp'.$empleado[6]. '</p>';
+                    echo '<strong> NÚMERO DE TELÉFONO  DEL EMPLEADO : </strong>' .$empleado[7]. '</p>';
+                    echo '<strong> DIRECCIÓN DEL EMPLEADO : </strong>' .$empleado[8]. '</p>';
+                    echo '<strong> CURP DEL EMPLEADO : </strong>' .$empleado[9]. '</p>';
+                    echo '<strong> RFC DEL EMPLEADO : </strong>' .$empleado[10]. '</p>';
                 }
 
 //CONEXIÓN A LA TABLA DEL CLIENTE
@@ -71,11 +71,11 @@
                 $conexion = new PDO('mysql:host=localhost;dbname='.$this->bdname,$this->username, $this->pass);
                 foreach($conexion->query('SELECT * FROM Cliente')as $cliente){
                     echo '<br></br>';
-                    echo 'NOMBRE DEL CLIENTE : ' .$cliente[1], $cliente[2]. '</p>';
-                    echo 'APELLIDO DEL CLIENTE : ' .$cliente[3], $cliente[4]. '</p>';
-                    echo 'NÚMERO DE TELÉFONO DEL CLIENTE : ' .$cliente[5]. '</p>';
-                    echo 'DIRECCIÓN DEL CLIENTE : ' .$cliente[6]. '</p>';
-                    echo 'FECHA DE NACIMIENTO DEL CLIENTE : ' .$cliente[7]. '</p>';
+                    echo '<strong> NOMBRE DEL CLIENTE : </strong>' .$cliente[1].'&nbsp'.$cliente[2]. '</p>';
+                    echo '<strong> APELLIDO DEL CLIENTE : </strong>' .$cliente[3].'&nbsp'.$cliente[4]. '</p>';
+                    echo '<strong> NÚMERO DE TELÉFONO DEL CLIENTE : </strong>' .$cliente[5]. '</p>';
+                    echo '<strong> DIRECCIÓN DEL CLIENTE : </strong>' .$cliente[6]. '</p>';
+                    echo '<strong> FECHA DE NACIMIENTO DEL CLIENTE : </strong>' .$cliente[7]. '</p>';
                     echo '<br/>';
                 }
 
