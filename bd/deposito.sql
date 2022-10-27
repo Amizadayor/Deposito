@@ -30,18 +30,6 @@ create table Producto(
     foreign key (Proveedor_id) references Proveedor (Id)
 );
 
-create table Cliente(
-    Id int not null primary key auto_increment,
-    Nombre_1 varchar(255) not null,
-    Nombre_2 varchar(255),
-    Apellido_paterno varchar(255) not null,
-    Apellido_materno varchar(255) not null,
-    Numero_telefono int (10) not null,
-    Direccion varchar(255) not null,
-    Fecha_nacimiento varchar(10) not null
-
-);
-
 create table Empleado(
     Id int not null primary key auto_increment,
     Usuario varchar(20) not null,
@@ -54,6 +42,18 @@ create table Empleado(
     Direccion varchar(255) not null,
     Curp varchar(18) not null,
     RFC varchar(13) not null
+
+);
+
+create table Cliente(
+    Id int not null primary key auto_increment,
+    Nombre_1 varchar(255) not null,
+    Nombre_2 varchar(255),
+    Apellido_paterno varchar(255) not null,
+    Apellido_materno varchar(255) not null,
+    Numero_telefono int (10) not null,
+    Direccion varchar(255) not null,
+    Fecha_nacimiento varchar(10) not null
 
 );
 
