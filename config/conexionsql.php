@@ -42,7 +42,7 @@ class conexionsql
             echo '<hr>';
             echo "<h1> PRODUCTOS REGISTRADOS </h1>";
             $conexion = new PDO('mysql:host=localhost;dbname=' . $this->bdname, $this->username, $this->pass);
-            foreach ($conexion->query('SELECT * FROM Producto') as $producto) {
+            foreach ($conexion->query("select p.id, p.Nombre_producto, p.Precio_producto, p.Stock, c.Nombre_categoria, CONCAT(pr.Nombre_1 , ' ' , pr.Nombre_2 , ' ' ,pr.Apellido_paterno , ' ' ,pr.Apellido_materno) AS NOMBRE from producto p join categoria c on p.Categoria_id= c.Id JOIN proveedor pr on p.Proveedor_id= pr.Id;") as $producto) {
                 echo '<br></br>';
                 echo '<strong> NOMBRE DEL PRODUCTO : </strong>' . $producto[1] . '</p>';
                 echo '<strong> PRECIO DEL PRODUCTO : </strong>' . $producto[2] . '</p>';

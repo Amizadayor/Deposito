@@ -85,7 +85,7 @@ INSERT INTO Proveedor(Nombre_1, NOMBRE_2, Apellido_paterno, Apellido_materno, Nu
 INSERT INTO Categoria(Nombre_categoria, Capacidad_producto) VALUES('Cuartito', '210 ml');
 INSERT INTO Categoria(Nombre_categoria, Capacidad_producto) VALUES('Media', '355 ml');
 
-INSERT INTO Producto(Nombre_producto, Precio_producto, Stock, Categoria_id, Proveedor_id) VALUES('Corona', '$ 13.5', '100', '1', '2');
+INSERT INTO Producto(Nombre_producto, Precio_producto, Stock, Categoria_id, Proveedor_id) VALUES('Corona', '13.5', '100', '1', '2');
 
 INSERT INTO Empleado(Usuario, Password_empleado, Nombre_1, Nombre_2, Apellido_paterno, Apellido_materno, Numero_telefono, Direccion, Curp, RFC)
 VALUES ('Manuelux','123456789','Luis', 'Manuel','Reynosa', 'Merida', '9711025196', 'Calle 08 Tamaulipas, Salina Cruz', 'LMRM000911HOCJSNA8', 'LMRM8305281HO');
