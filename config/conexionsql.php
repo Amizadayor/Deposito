@@ -7,7 +7,7 @@ class conexionsql
     private $host = 'localhost';
     private $bdname = 'deposito';
     private $username = 'root';
-    private $pass = '11092000';
+    private $pass = '';
     private $conexion;
 
     //metodo que nos ayudara a conectarnos
