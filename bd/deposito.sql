@@ -64,7 +64,6 @@ create table Venta(
     Total_final varchar (255) not null,
     Cantidad_producto_final int not null,
     Fecha_venta varchar(50) not null,
-
     Cliente_id int not null,
     Empleado_id int not null,
     foreign key (Cliente_id) references Cliente (Id),
@@ -96,8 +95,6 @@ VALUES ('Manuelux','123456789','Luis', 'Manuel','Reynosa', 'Merida', '9711025196
 INSERT INTO Cliente(Nombre_1, Nombre_2, Apellido_paterno, Apellido_materno, Numero_telefono, Direccion, Fecha_nacimiento)
 VALUES ('Angel', 'Orrin','Naranjo', 'Cruz', '9719178210', 'Calle 01 Chiapas, Salina Cruz', '11-09-1999');
 
-INSERT INTO Venta (Total_final, Cantidad_producto_final, Fecha_venta, Cliente_id, Empleado_id) VALUES ('$30',
- '1', '01/11/2022', '1', '1');
+INSERT INTO Venta (Total_final, Cantidad_producto_final, Fecha_venta, Cliente_id, Empleado_id) VALUES ('$30','1', '01/11/2022', '1', '1');
 
-INSERT INTO ProductoVenta (Total_venta, Cantidad_producto_vendido, Producto_id, Venta_id) VALUES ('$30',
- '1', '1', '1');
+INSERT INTO ProductoVenta (Total_venta, Cantidad_producto_vendido, Producto_id, Venta_id) VALUES ('$30','1', '1', '1');

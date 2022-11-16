@@ -85,32 +85,6 @@ class conexionsql
                 echo '<strong> FECHA DE NACIMIENTO DEL CLIENTE : </strong>' . $cliente[7] . '</p>';
             }
 
-            //VENTAS REGISTRADAS
-            echo '<hr>';
-            echo "<h1> VENTAS  REGISTRADOS </h1>";
-            $conexion = new PDO('mysql:host=localhost;dbname=' . $this->bdname, $this->username, $this->pass);
-            foreach ($conexion->query('SELECT * FROM Venta') as $venta) {
-                echo '<br></br>';
-                echo '<strong> TOTAL DE LA VENTA : </strong>' . $venta[1] . '</p>';
-                echo '<strong> CANTIDAD DE PRODUCTOS VENDIDOS : </strong>' . $venta[2] . '</p>';
-                echo '<strong> DATOS DEL CLIENTE : </strong>' . $venta[3] . '</p>';
-                echo '<strong> DATOS DEL EMPLEADO : </strong>' . $empleado[4] .'</p>';
-                echo '<strong> FECHA DE LA VENTA : </strong>' . $empleado[5] . '</p>';
-            }
-
-            //PRODUCTOS VENDIDOS
-            echo '<hr>';
-            echo "<h1> PRODUCTOS VENDIDOS </h1>";
-            $conexion = new PDO('mysql:host=localhost;dbname=' . $this->bdname, $this->username, $this->pass);
-            foreach ($conexion->query('SELECT * FROM Producto_venta') as $producto_venta) {
-                echo '<br></br>';
-                echo '<strong> TOTAL DE PRODUCTOS VENDIDOS : </strong>' . $producto_venta[1] . '</p>';
-                echo '<strong> CANTIDAD DE PRODUCTOS VENDIDOS : </strong>' . $venta[2] . '</p>';
-                echo '<strong> PRODUCTOS VENDIDOS : </strong>' . $venta[3] . '</p>';
-                echo '<strong> DATOS DE LA VENTA : </strong>' . $empleado[4] .'</p>';
-                echo '<hr>';
-            }
-
             //CONEXIÓN A LA TABLA DE VENTAS REGISTRADAS
             echo '<hr>';
             echo "<h1> TOTAL DE VENTAS REGISTRADAS </h1>";
@@ -125,9 +99,9 @@ class conexionsql
                 echo '<strong> ID DEL EMPLEADO : </strong>' . $venta[5] . '</p>';
             }
 
-             //CONEXIÓN A LA TABLA DE LA VENTA DE PRODUCTOS
+             //CONEXIÓN A LA TABLA DE PRODUCTO_VENTA
             echo '<hr>';
-            echo "<h1> TOTAL DE VENTA DE PRODUCTOS REGISTRADOS </h1>";
+            echo "<h1> TOTAL DE PRODUCTOS VENDIDOS </h1>";
             $conexion = new PDO('mysql:host=localhost;dbname=' . $this->bdname, $this->username, $this->pass);
              foreach ($conexion->query('SELECT * FROM ProductoVenta') as $productoVenta) {
                 echo '<br></br>';
