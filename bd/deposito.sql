@@ -59,7 +59,7 @@ create table Cliente(
 
 create table Venta(
     Id int not null primary key auto_increment,
-    Total int not null,
+    Total_venta int not null,
     Cantidad_producto_vendido int not null,
     Cliente_id int not null,
     Empleado_id int not null,

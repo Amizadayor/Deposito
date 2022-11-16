@@ -78,9 +78,34 @@ class conexionsql
                 echo '<strong> NÚMERO DE TELÉFONO DEL CLIENTE : </strong>' . $cliente[5] . '</p>';
                 echo '<strong> DIRECCIÓN DEL CLIENTE : </strong>' . $cliente[6] . '</p>';
                 echo '<strong> FECHA DE NACIMIENTO DEL CLIENTE : </strong>' . $cliente[7] . '</p>';
-                echo '<hr>';
-                echo '<br/>';
             }
+
+            //VENTAS REGISTRADAS
+            echo '<hr>';
+            echo "<h1> VENTAS  REGISTRADOS </h1>";
+            $conexion = new PDO('mysql:host=localhost;dbname=' . $this->bdname, $this->username, $this->pass);
+            foreach ($conexion->query('SELECT * FROM Venta') as $venta) {
+                echo '<br></br>';
+                echo '<strong> TOTAL DE LA VENTA : </strong>' . $venta[1] . '</p>';
+                echo '<strong> CANTIDAD DE PRODUCTOS VENDIDOS : </strong>' . $venta[2] . '</p>';
+                echo '<strong> DATOS DEL CLIENTE : </strong>' . $venta[3] . '</p>';
+                echo '<strong> DATOS DEL EMPLEADO : </strong>' . $empleado[4] .'</p>';
+                echo '<strong> FECHA DE LA VENTA : </strong>' . $empleado[5] . '</p>';
+            }
+
+            //PRODUCTOS VENDIDOS
+            echo '<hr>';
+            echo "<h1> PRODUCTOS VENDIDOS </h1>";
+            $conexion = new PDO('mysql:host=localhost;dbname=' . $this->bdname, $this->username, $this->pass);
+            foreach ($conexion->query('SELECT * FROM Producto_venta') as $producto_venta) {
+                echo '<br></br>';
+                echo '<strong> TOTAL DE PRODUCTOS VENDIDOS : </strong>' . $producto_venta[1] . '</p>';
+                echo '<strong> CANTIDAD DE PRODUCTOS VENDIDOS : </strong>' . $venta[2] . '</p>';
+                echo '<strong> PRODUCTOS VENDIDOS : </strong>' . $venta[3] . '</p>';
+                echo '<strong> DATOS DE LA VENTA : </strong>' . $empleado[4] .'</p>';
+                echo '<hr>';
+            }
+
         } catch (PDOException $e) {
             echo "Ocurrio un error al conectarte a la base de datos" . $e;
         }
