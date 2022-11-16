@@ -1,7 +1,7 @@
 <?php
-include 'config/conexionsql.php';
+include 'connection/conexionsql.php';
 
-echo '<link href="../Deposito/css/style.css" rel="stylesheet">';
+echo '<link href="../API/css/style.css" rel="stylesheet">';
 echo '<br>';
 echo '<hr>';
 echo "<h1> DATOS REGISTRADOS </h1> ";
